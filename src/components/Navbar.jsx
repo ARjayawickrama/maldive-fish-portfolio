@@ -4,13 +4,12 @@ import { ArrowRight, Menu, MoonStar, SunMedium, X } from 'lucide-react'
 
 const navItems = [
   { label: 'Home', to: '/' },
-  { label: 'Research', to: '/research' },
-  { label: 'Architecture', to: '/architecture' },
-  { label: 'AI Inspection', to: '/ai-inspection' },
-  { label: 'IoT Monitoring', to: '/iot-monitoring' },
-  { label: 'Results', to: '/results' },
-  { label: 'Team', to: '/team' },
-  { label: 'References', to: '/references' },
+  { label: 'Domain', to: '/research' },
+  { label: 'Milestones', to: '/milestones' },
+  { label: 'Documents', to: '/documents' },
+  { label: 'Presentations', to: '/presentations' },
+  { label: 'About us', to: '/team' },
+  { label: 'Contact us', to: '/contact' },
 ]
 
 export default function Navbar({ theme, setTheme }) {
@@ -29,7 +28,7 @@ export default function Navbar({ theme, setTheme }) {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 lg:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}

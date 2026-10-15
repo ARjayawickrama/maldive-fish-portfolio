@@ -21,14 +21,14 @@ export default function Home() {
               Smart Maldive Fish Processing
             </h1>
             <h2 className="mt-4 max-w-2xl text-xl font-medium text-slate-300 sm:text-2xl">
-              AI-powered quality assessment and IoT-driven process optimization for traditional fish processing.
+              An integrated research project applying AI and IoT to quality assessment and process monitoring in traditional fish processing.
             </h2>
             <p className="mt-6 max-w-xl text-base leading-7 text-slate-300">
-              Transform traditional Maldive fish processing into a digitally monitored, data-driven production workflow using computer vision, gas sensing, IoT telemetry, process optimization and shelf-life prediction.
+              This project explores how computer vision, gas sensing and IoT telemetry can support fish inspection, process optimization and end-to-end production traceability.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/research" className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">
-                Explore Research
+                Explore Domain
                 <ArrowRight size={16} />
               </Link>
               <Link to="/dashboard" className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-400/40 hover:bg-white/10">
@@ -64,6 +64,30 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-slate-900 px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 max-w-2xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Project information</p>
+            <h2 className="text-3xl font-bold text-white">Explore the project</h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              ['Domain', 'Research background, objectives, methodology and technologies.', '/research'],
+              ['Milestones', 'Assessment milestones and schedule information.', '/milestones'],
+              ['Documents', 'Project reports and supporting documents.', '/documents'],
+              ['Presentations', 'Slides from project presentations.', '/presentations'],
+              ['About us', 'Meet the project research team.', '/team'],
+              ['Contact us', 'Get in touch with the project team.', '/contact'],
+            ].map(([title, description, to]) => (
+              <Link key={to} to={to} className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/40 hover:bg-white/10">
+                <span className="flex items-center justify-between text-lg font-semibold text-white">{title}<ArrowRight size={18} className="text-cyan-300 transition group-hover:translate-x-1" /></span>
+                <span className="mt-2 block text-sm leading-6 text-slate-300">{description}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

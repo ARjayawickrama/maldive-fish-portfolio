@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 
 const footerLinks = [
-  { label: 'Research', to: '/research' },
+  { label: 'Domain', to: '/research' },
+  { label: 'Milestones', to: '/milestones' },
+  { label: 'Documents', to: '/documents' },
+  { label: 'Presentations', to: '/presentations' },
+  { label: 'About us', to: '/team' },
+  { label: 'Contact us', to: '/contact' },
   { label: 'Architecture', to: '/architecture' },
   { label: 'AI Inspection', to: '/ai-inspection' },
   { label: 'IoT Monitoring', to: '/iot-monitoring' },
   { label: 'Results', to: '/results' },
-  { label: 'Team', to: '/team' },
   { label: 'References', to: '/references' },
   { label: 'Dashboard', to: '/dashboard' },
 ]

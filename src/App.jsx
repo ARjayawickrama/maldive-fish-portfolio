@@ -13,6 +13,9 @@ import Team from './pages/Team'
 import References from './pages/References'
 import Contact from './pages/Contact'
 import Dashboard from './pages/Dashboard'
+import Milestones from './pages/Milestones'
+import Documents from './pages/Documents'
+import Presentations from './pages/Presentations'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -52,6 +55,9 @@ function AppLayout() {
           <Route path="/team" element={<Team />} />
           <Route path="/references" element={<References />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/milestones" element={<Milestones />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/presentations" element={<Presentations />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>

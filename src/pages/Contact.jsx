@@ -1,6 +1,16 @@
 import { Mail, MapPin, MessageSquareText } from 'lucide-react'
 
 export default function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const subject = encodeURIComponent(formData.get('subject'))
+    const body = encodeURIComponent(
+      `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`,
+    )
+    window.location.href = `mailto:research@smartmaldive.ai?subject=${subject}&body=${body}`
+  }
+
   return (
     <div className="bg-slate-950 px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -34,26 +44,27 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6">
+          <form onSubmit={handleSubmit} className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6">
             <div className="grid gap-4 md:grid-cols-2">
               <label className="block">
                 <span className="mb-2 block text-sm text-slate-300">Name</span>
-                <input className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Your name" />
+                <input name="name" required className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Your name" />
               </label>
               <label className="block">
                 <span className="mb-2 block text-sm text-slate-300">Email</span>
-                <input type="email" className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="you@example.com" />
+                <input name="email" type="email" required className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="you@example.com" />
               </label>
             </div>
             <label className="mt-4 block">
               <span className="mb-2 block text-sm text-slate-300">Subject</span>
-              <input className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Project collaboration" />
+              <input name="subject" required className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Project collaboration" />
             </label>
             <label className="mt-4 block">
               <span className="mb-2 block text-sm text-slate-300">Message</span>
-              <textarea rows="5" className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Tell us about your research interest..." />
+              <textarea name="message" required rows="5" className="w-full rounded-xl border border-white/10 bg-slate-800 px-3 py-3 text-white" placeholder="Tell us about your research interest..." />
             </label>
-            <button type="button" className="mt-5 inline-flex rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950">
+            <p className="mt-4 text-xs text-slate-400">Your default email application will open with your message ready to send.</p>
+            <button type="submit" className="mt-5 inline-flex rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950">
               Send Inquiry
             </button>
           </form>
