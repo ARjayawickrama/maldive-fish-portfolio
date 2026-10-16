@@ -5,6 +5,7 @@ A responsive research website for the integrated AI and IoT-based smart Maldive 
 ## Features
 
 - React Router pages for research, architecture, AI inspection, IoT monitoring, optimization, results, team, references, contact, and dashboard
+- Downloadable project research paper, individual proposals, thesis drafts, and presentations
 - Light and dark themes with browser persistence
 - Interactive calculators and simulated monitoring dashboard
 - Responsive navigation and mobile layout
@@ -42,5 +43,5 @@ The included `vercel.json` file automatically redirects all routes to the Vite a
 
 - `src/pages` — website pages and interactive sections
 - `src/components` — reusable navigation, cards, charts, and dashboard components
-- `src/data` — research and dashboard data
+- `src/data` — research, dashboard, and downloadable resource data
 - `src/utils` — calculation logic
