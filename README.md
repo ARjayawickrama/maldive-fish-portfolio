@@ -1,18 +1,10 @@
 # SmartMaldive AI
 
-A responsive research website for the integrated AI and IoT-based smart Maldive fish processing system.
+A responsive, static HTML and CSS research website for an integrated AI- and IoT-based smart Maldive fish processing system. The site uses no React or client-side JavaScript. Navigation uses in-page links, and the project files are direct downloads.
 
-## Features
+## Local preview
 
-- React Router pages for research, architecture, AI inspection, IoT monitoring, optimization, results, team, references, contact, and dashboard
-- Downloadable project research paper, individual proposals, thesis drafts, and presentations
-- Light and dark themes with browser persistence
-- Interactive calculators and simulated monitoring dashboard
-- Responsive navigation and mobile layout
-- Recharts analytics and Framer Motion animations
-- Vercel-compatible SPA routing
-
-## Local development
+Install the development dependency and start Vite:
 
 ```bash
 npm install
@@ -28,20 +20,16 @@ npm run build
 npm run preview
 ```
 
-## Free deployment on Vercel
+The production output is written to `dist`. The supplied reports, presentations and thesis PDFs are served from `New folder` and copied into the build by Vite.
 
-1. Push this project to GitHub, GitLab, or Bitbucket.
-2. Sign in to Vercel and select **Add New Project**.
-3. Import the repository.
-4. Keep the default build command as `npm run build`.
-5. Set the output directory to `dist`.
-6. Select **Deploy**.
+Before deploying from Git, include the files in `New folder/Thesis`; that supplied folder is currently untracked.
 
-The included `vercel.json` file automatically redirects all routes to the Vite application entry point.
+## Deploy on Vercel
 
-## Project structure
+Import the repository, use `npm run build` as the build command and `dist` as the output directory. The included `vercel.json` keeps the single-page anchor navigation available at the site root.
 
-- `src/pages` — website pages and interactive sections
-- `src/components` — reusable navigation, cards, charts, and dashboard components
-- `src/data` — research, dashboard, and downloadable resource data
-- `src/utils` — calculation logic
+## Project files
+
+- `index.html` — complete static website content and in-page navigation
+- `styles.css` — responsive layout, typography, colors and components
+- `New folder` — downloadable reports, proposals, thesis drafts and presentations

@@ -1,14 +1,518 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Research project on AI and IoT for smart Maldive fish processing." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Research project on AI and IoT for smart Maldive fish processing.">
+    <meta name="theme-color" content="#07111f">
     <title>SmartMaldive AI | Smart Maldive Fish Processing</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="SmartMaldive AI home">
+          <span class="brand-mark">SM</span>
+          <span>SmartMaldive AI</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#domain">Domain</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#ai-inspection">AI inspection</a>
+          <a href="#iot-monitoring">IoT monitoring</a>
+          <a href="#optimization">Optimization</a>
+          <a href="#results">Results</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#milestones">Milestones</a>
+          <a href="#documents">Documents</a>
+          <a href="#presentations">Presentations</a>
+          <a href="#team">About us</a>
+          <a href="#references">References</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero page-section" id="home">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">AI + IoT research project</p>
+            <h1>Smart Maldive Fish Processing</h1>
+            <p class="hero-lead">An integrated research project applying AI and IoT to quality assessment and process monitoring in traditional fish processing.</p>
+            <p class="muted">This project explores how computer vision, gas sensing and IoT telemetry can support fish inspection, process optimization and end-to-end production traceability.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="#domain">Explore the research</a>
+              <a class="button button-secondary" href="#dashboard">View demo data</a>
+            </div>
+          </div>
+          <div class="panel hero-workflow">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Traditional-to-intelligent workflow</p>
+                <h2>From intake to traceability</h2>
+              </div>
+              <span class="badge badge-green">Research demo</span>
+            </div>
+            <ol class="workflow">
+              <li><span>01</span>Raw fish intake</li>
+              <li><span>02</span>AI freshness inspection</li>
+              <li><span>03</span>Boiling and salting</li>
+              <li><span>04</span>Smart drying</li>
+              <li><span>05</span>Final quality assessment</li>
+              <li><span>06</span>Shelf-life and traceability</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Project information</p>
+              <h2>Explore the project</h2>
+            </div>
+          </div>
+          <div class="card-grid card-grid-3">
+            <a class="card card-link" href="#domain"><h3>Research domain</h3><p>Background, objectives, methodology and technologies.</p></a>
+            <a class="card card-link" href="#milestones"><h3>Milestones</h3><p>Assessment milestones and schedule information.</p></a>
+            <a class="card card-link" href="#documents"><h3>Documents</h3><p>Research paper, proposals and thesis drafts.</p></a>
+            <a class="card card-link" href="#presentations"><h3>Presentations</h3><p>Proposal and progress presentation downloads.</p></a>
+            <a class="card card-link" href="#team"><h3>Research team</h3><p>Meet the project research team.</p></a>
+            <a class="card card-link" href="#contact"><h3>Contact</h3><p>Contact the research team about the project.</p></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <p class="eyebrow">Project overview</p>
+          <h2>Research at a glance</h2>
+          <div class="card-grid card-grid-3">
+            <article class="metric-card"><span class="metric-value">95.8%</span><h3>Raw fish mAP@0.5</h3></article>
+            <article class="metric-card"><span class="metric-value">94.0%</span><h3>Final product accuracy</h3></article>
+            <article class="metric-card"><span class="metric-value">27.9%</span><h3>Boiling time reduction</h3></article>
+            <article class="metric-card"><span class="metric-value">99.6%</span><h3>MQTT delivery rate</h3></article>
+            <article class="metric-card"><span class="metric-value">4.2 days</span><h3>Optimized drying duration</h3></article>
+            <article class="metric-card"><span class="metric-value">23.0%</span><h3>Thermal energy reduction</h3></article>
+          </div>
+          <p class="note">Figures shown are research results and demonstration values, not live production measurements.</p>
+        </div>
+      </section>
+
+      <section class="page-section section-light">
+        <div class="container">
+          <p class="eyebrow">Research problem</p>
+          <h2>Why smart Maldive fish processing?</h2>
+          <div class="card-grid card-grid-4">
+            <article class="card"><h3>Subjective freshness assessment</h3><p>Visual checks can vary between assessors and batches.</p></article>
+            <article class="card"><h3>Uncontrolled boiling</h3><p>Manual timing can lead to inconsistent processing and energy use.</p></article>
+            <article class="card"><h3>Unmonitored drying</h3><p>Changing temperature, humidity and airflow affect drying conditions.</p></article>
+            <article class="card"><h3>Inconsistent final quality</h3><p>Final product grading can be subjective without recorded quality data.</p></article>
+          </div>
+          <div class="panel light-panel">
+            <p class="eyebrow">System transformation</p>
+            <h2>From traditional processing to intelligent production</h2>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Traditional process</th><th>Proposed smart process</th></tr></thead>
+                <tbody>
+                  <tr><td>Manual inspection</td><td>AI vision and gas sensing</td></tr>
+                  <tr><td>Manual boiling estimation</td><td>Empirical process optimization</td></tr>
+                  <tr><td>Open, unmonitored drying</td><td>ESP32-based IoT monitoring</td></tr>
+                  <tr><td>Subjective final grading</td><td>ResNet-18 and VOC analysis</td></tr>
+                  <tr><td>No digital traceability</td><td>End-to-end batch records</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="domain">
+        <div class="container">
+          <p class="eyebrow">Project domain</p>
+          <h2>Research background and objectives</h2>
+          <p class="section-intro">An integrated AI and IoT approach to improve quality assessment, process monitoring and traceability across traditional Maldive fish production.</p>
+          <div class="card-grid card-grid-2">
+            <article class="card"><h3>Literature survey</h3><p>Prior work in fish freshness assessment, computer vision, food-process monitoring and shelf-life modelling informs the proposed system. See the <a href="#references">academic references</a>.</p></article>
+            <article class="card"><h3>Research problem</h3><p>Traditional Maldive fish processing relies on subjective inspection and limited monitoring, contributing to variation in process control and final product quality.</p></article>
+            <article class="card"><h3>Research objectives</h3><p>Develop an integrated workflow for AI-assisted fish assessment, monitored processing, drying analytics and traceable quality evaluation.</p></article>
+            <article class="card"><h3>Research gap</h3><p>Many existing approaches address a single stage. This project brings inspection, process monitoring and final quality assessment together in one workflow.</p></article>
+          </div>
+          <article class="panel">
+            <p class="eyebrow">Project objectives</p>
+            <ul class="check-list">
+              <li>Assess raw fish freshness using computer vision and gas-sensor readings.</li>
+              <li>Monitor and optimize boiling, salting and drying conditions.</li>
+              <li>Evaluate final product quality using image-based classification.</li>
+              <li>Keep a traceable record of batch and process information.</li>
+            </ul>
+          </article>
+          <h2 class="subheading">Research pillars</h2>
+          <div class="card-grid card-grid-4">
+            <article class="card"><h3>AI quality inspection</h3><p>Vision-driven freshness assessment for raw fish using object detection and sensor fusion.</p></article>
+            <article class="card"><h3>Thermal process control</h3><p>Boiling and salting are optimized through empirical formulas and thermal response.</p></article>
+            <article class="card"><h3>Drying telemetry</h3><p>ESP32 nodes monitor humidity, airflow and VOC signals to support a stable environment.</p></article>
+            <article class="card"><h3>Predictive analytics</h3><p>Shelf-life modelling and grade prediction support a measurable production loop.</p></article>
+          </div>
+          <article class="panel">
+            <p class="eyebrow">Research pipeline</p>
+            <h2>Eight-stage processing workflow</h2>
+            <ol class="stage-list">
+              <li><strong>Raw fish intake</strong><span>Batch registration and initial sensory screening for fresh tuna intake.</span></li>
+              <li><strong>AI freshness inspection</strong><span>YOLO11s detection and freshness classification from images and gas readings. mAP@0.5: 95.8%.</span></li>
+              <li><strong>Intelligent boiling</strong><span>Adjust boiling using thickness, fish mass and freshness-aware thermal models.</span></li>
+              <li><strong>Brine salting</strong><span>Target 12%–15% brine concentration and improve salt uniformity.</span></li>
+              <li><strong>IoT drying monitoring</strong><span>ESP32 nodes stream temperature, humidity, airflow and VOC trends.</span></li>
+              <li><strong>Final product assessment</strong><span>Grade dried product using ResNet-18 and sensor-derived quality signals.</span></li>
+              <li><strong>Shelf-life prediction</strong><span>Arrhenius-based model estimates storage reliability and product longevity.</span></li>
+              <li><strong>Digital storage traceability</strong><span>Retain a digital trail for batch process history and quality review.</span></li>
+            </ol>
+          </article>
+          <article class="panel">
+            <p class="eyebrow">Technology stack</p>
+            <h2>Technologies used</h2>
+            <ul class="tag-list">
+              <li>YOLO11s</li><li>ResNet-18</li><li>MQ-135 gas sensor</li><li>DHT22 temperature / humidity</li><li>ESP32</li><li>MQTT</li><li>Shelf-life modelling</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <p class="eyebrow">Research gap</p>
+            <h2>Related research and system scope</h2>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Existing systems</th><th>Proposed system</th></tr></thead>
+                <tbody>
+                  <tr><td>Raw fish only</td><td>All processing stages</td></tr>
+                  <tr><td>Laboratory focused</td><td>Vision, gas sensing and IoT</td></tr>
+                  <tr><td>Single-stage</td><td>Real-time monitoring</td></tr>
+                  <tr><td>No end-to-end traceability</td><td>Edge AI and digital traceability</td></tr>
+                  <tr><td>Limited real-time deployment</td><td>End-to-end production workflow</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="architecture">
+        <div class="container">
+          <p class="eyebrow">Cyber-physical system</p>
+          <h2>End-to-end system architecture</h2>
+          <ol class="architecture-flow">
+            <li>Camera and MQ-135</li><li>AI raw fish inspection</li><li>Process control unit</li><li>Boiling and salting</li><li>ESP32 IoT node</li><li>DHT22, airflow and MQ-135</li><li>MQTT broker</li><li>Drying monitoring</li><li>ResNet-18 and VOC analysis</li><li>Shelf-life engine</li><li>Central dashboard</li>
+          </ol>
+          <div class="card-grid card-grid-5">
+            <article class="card"><h3>AI layer</h3><p>YOLO11s<br>ResNet-18</p></article>
+            <article class="card"><h3>Sensor layer</h3><p>MQ-135<br>DHT22<br>PT100<br>Hot-wire anemometer</p></article>
+            <article class="card"><h3>Edge layer</h3><p>ESP32<br>NVIDIA Jetson Orin Nano</p></article>
+            <article class="card"><h3>Communication layer</h3><p>MQTT<br>Wi-Fi</p></article>
+            <article class="card"><h3>Analytics layer</h3><p>Shelf-life prediction<br>Process optimization<br>Quality grading</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="ai-inspection">
+        <div class="container">
+          <p class="eyebrow">AI inspection</p>
+          <h2>AI-powered raw fish quality assessment</h2>
+          <p class="section-intro">A research demonstration combining image-based detection with MQ-135 gas-sensor readings. This static page does not perform inference or accept image uploads.</p>
+          <div class="card-grid card-grid-3">
+            <article class="card"><h3>Very fresh</h3><p>MQ-135 ADC ≤ 90</p></article>
+            <article class="card"><h3>Fresh / acceptable</h3><p>MQ-135 ADC 91–150</p></article>
+            <article class="card"><h3>Spoiled / rejected</h3><p>MQ-135 ADC &gt; 150</p></article>
+          </div>
+          <article class="panel">
+            <div class="section-heading"><div><p class="eyebrow">YOLO11s performance summary</p><h3>Model metrics</h3></div><span class="badge">Research results</span></div>
+            <div class="card-grid card-grid-4">
+              <div class="metric-card"><span class="metric-value">94.1%</span><h3>Precision</h3></div>
+              <div class="metric-card"><span class="metric-value">93.7%</span><h3>Recall</h3></div>
+              <div class="metric-card"><span class="metric-value">93.9%</span><h3>F1 score</h3></div>
+              <div class="metric-card"><span class="metric-value">95.8%</span><h3>mAP@0.5</h3></div>
+              <div class="metric-card"><span class="metric-value">16.2 ms</span><h3>Latency</h3></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="iot-monitoring">
+        <div class="container">
+          <p class="eyebrow">IoT monitoring</p>
+          <h2>Drying environment monitoring</h2>
+          <p class="section-intro">Example sensor readings from the research demonstration. Values are static snapshots, not a live connection.</p>
+          <div class="card-grid card-grid-4">
+            <article class="metric-card"><span class="metric-value">31.4 °C</span><h3>Temperature</h3><p>Example reading</p></article>
+            <article class="metric-card"><span class="metric-value">68%</span><h3>Humidity</h3><p>Example reading</p></article>
+            <article class="metric-card"><span class="metric-value">1.2 m/s</span><h3>Airflow</h3><p>Example reading</p></article>
+            <article class="metric-card"><span class="metric-value">72 ADC</span><h3>MQ-135</h3><p>Example reading</p></article>
+          </div>
+          <article class="panel">
+            <h3>Illustrative sensor trend</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Time</th><th>Temperature</th><th>Humidity</th><th>Airflow</th><th>VOC</th></tr></thead>
+                <tbody>
+                  <tr><td>08:00</td><td>29.6 °C</td><td>71%</td><td>1.3 m/s</td><td>78 ADC</td></tr>
+                  <tr><td>09:00</td><td>30.1 °C</td><td>72%</td><td>1.2 m/s</td><td>80 ADC</td></tr>
+                  <tr><td>10:00</td><td>31.4 °C</td><td>68%</td><td>1.2 m/s</td><td>72 ADC</td></tr>
+                  <tr><td>11:00</td><td>32.0 °C</td><td>70%</td><td>1.05 m/s</td><td>74 ADC</td></tr>
+                  <tr><td>12:00</td><td>31.7 °C</td><td>74%</td><td>0.9 m/s</td><td>82 ADC</td></tr>
+                  <tr><td>13:00</td><td>31.2 °C</td><td>76%</td><td>0.7 m/s</td><td>88 ADC</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">Research alert condition: relative humidity above 75% and airflow below 0.5 m/s for more than 15 minutes. An auxiliary fan or protective solar cover may be recommended.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section" id="optimization">
+        <div class="container">
+          <p class="eyebrow">Process optimization</p>
+          <h2>Boiling and salt distribution</h2>
+          <p class="section-intro">Static example recommendations are shown below. The original interactive calculators are not included in the HTML/CSS-only version.</p>
+          <div class="card-grid card-grid-4">
+            <article class="metric-card"><span class="metric-value">42.1 min</span><h3>Recommended boiling time</h3><p>Illustrative optimized batch</p></article>
+            <article class="metric-card"><span class="metric-value">12%–15%</span><h3>Brine range</h3><p>Research target</p></article>
+            <article class="metric-card"><span class="metric-value">92–96 °C</span><h3>Core temperature</h3><p>Research target</p></article>
+            <article class="metric-card"><span class="metric-value">27.9%</span><h3>Time reduction</h3><p>Reported result</p></article>
+          </div>
+          <article class="panel">
+            <h3>Research equation</h3>
+            <p class="equation">t<sub>b</sub> = α × (d<sub>m</sub> / d<sub>0</sub>)<sup>1.4</sup> × (M<sub>batch</sub> / M<sub>0</sub>)<sup>0.3</sup> + δ(Y<sub>raw</sub>)</p>
+            <p class="muted">Where d<sub>0</sub> = 4.5 cm, M<sub>0</sub> = 15 kg, α = 40 minutes, and δ = 0 for Very Fresh and +3.5 min for Fresh.</p>
+          </article>
+          <article class="panel">
+            <p class="eyebrow">Shelf-life prediction</p>
+            <h3>Predictive shelf-life engine</h3>
+            <div class="card-grid card-grid-3">
+              <div class="metric-card"><span class="metric-value">180 days</span><h3>Baseline shelf life</h3></div>
+              <div class="metric-card"><span class="metric-value">42.5 kJ/mol</span><h3>Activation energy</h3></div>
+              <div class="metric-card"><span class="metric-value">0.65</span><h3>β coefficient</h3></div>
+            </div>
+            <p class="note">This research prototype provides an analytical estimate and should not replace laboratory food-safety testing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="results">
+        <div class="container">
+          <p class="eyebrow">Results and analytics</p>
+          <h2>Research results</h2>
+          <div class="card-grid card-grid-4">
+            <article class="metric-card"><span class="metric-value">95.8%</span><h3>Raw fish mAP@0.5</h3></article>
+            <article class="metric-card"><span class="metric-value">16.2 ms</span><h3>Inference latency</h3></article>
+            <article class="metric-card"><span class="metric-value">61.7</span><h3>Frames per second</h3></article>
+            <article class="metric-card"><span class="metric-value">94.0%</span><h3>Final accuracy</h3></article>
+          </div>
+          <article class="panel">
+            <h3>Before and after process performance</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Measure</th><th>Before</th><th>After</th></tr></thead>
+                <tbody>
+                  <tr><td>Boiling time</td><td>58.4 min</td><td>42.1 min</td></tr>
+                  <tr><td>Energy</td><td>3.82 MJ/kg</td><td>2.94 MJ/kg</td></tr>
+                  <tr><td>Salt variation</td><td>18.6%</td><td>5.2%</td></tr>
+                  <tr><td>Flaking loss</td><td>6.8%</td><td>1.1%</td></tr>
+                  <tr><td>Drying duration</td><td>6.5 ± 1.4 days</td><td>4.2 ± 0.3 days</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <div class="card-grid card-grid-2">
+            <article class="card"><h3>Dataset</h3><ul><li>20 full-scale production batches</li><li>15 kg raw tuna per batch</li><li>Four-month experimental period</li><li>Commercial processing facility in southern Sri Lanka</li></ul></article>
+            <article class="card"><h3>Research finding</h3><p>The proposed system demonstrated improvements across raw grading, thermal processing, drying stability and final product assessment.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="dashboard">
+        <div class="container">
+          <p class="eyebrow">Smart processing dashboard</p>
+          <h2>Operational overview</h2>
+          <p class="section-intro">Static demonstration records are shown for illustration. This version has no live sensor connection, batch selector or traceability controls.</p>
+          <div class="card-grid card-grid-4">
+            <article class="metric-card"><span class="metric-value">MFP-2026-001</span><h3>Example batch</h3></article>
+            <article class="metric-card"><span class="metric-value">Fresh</span><h3>Raw grade</h3></article>
+            <article class="metric-card"><span class="metric-value">42 min</span><h3>Boiling time</h3></article>
+            <article class="metric-card"><span class="metric-value">High quality</span><h3>Final grade</h3></article>
+          </div>
+          <article class="panel">
+            <h3>Batch traceability examples</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Batch</th><th>Date</th><th>Raw grade</th><th>Boiling</th><th>Salt</th><th>Drying</th><th>Final grade</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>MFP-2026-001</td><td>2026-02-16</td><td>Fresh</td><td>42 min</td><td>13.8%</td><td>4.1 days</td><td>High quality</td><td>Processing</td></tr>
+                  <tr><td>MFP-2026-002</td><td>2026-02-17</td><td>Very fresh</td><td>39 min</td><td>14.2%</td><td>4.0 days</td><td>High quality</td><td>Completed</td></tr>
+                  <tr><td>MFP-2026-003</td><td>2026-02-18</td><td>Fresh</td><td>44 min</td><td>13.4%</td><td>4.5 days</td><td>Medium quality</td><td>Completed</td></tr>
+                  <tr><td>MFP-2026-004</td><td>2026-02-21</td><td>Spoiled</td><td>49 min</td><td>12.6%</td><td>5.1 days</td><td>Low quality</td><td>Rejected</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <div class="card-grid card-grid-2">
+            <article class="card"><h3>Alert center</h3><ul><li>Drying environment alert: high RH and low airflow detected for 18 minutes.</li><li>Batch traceability records synchronized with the central dashboard.</li><li>MQTT telemetry delivery rate remains above 99.6%.</li></ul></article>
+            <article class="card"><h3>Example activity timeline</h3><ol><li>10:21 — Raw fish inspection completed</li><li>10:35 — Boiling started</li><li>11:17 — Boiling completed</li><li>12:00 — Drying monitoring started</li><li>12:45 — Sensor drift detected and corrected</li><li>13:30 — Batch traceability synced</li></ol></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="milestones">
+        <div class="container">
+          <p class="eyebrow">Project schedule</p>
+          <h2>Milestones</h2>
+          <p class="section-intro">Assessment milestones are listed below. Dates and allocated marks have not been provided yet.</p>
+          <div class="table-wrap panel">
+            <table>
+              <thead><tr><th>Assessment</th><th>Type</th><th>Date</th><th>Marks</th></tr></thead>
+              <tbody>
+                <tr><td>Project Proposal</td><td>Proposal</td><td>To be announced</td><td>To be announced</td></tr>
+                <tr><td>Progress Presentation - 1</td><td>Progress presentation</td><td>To be announced</td><td>To be announced</td></tr>
+                <tr><td>Progress Presentation - 2</td><td>Progress presentation</td><td>To be announced</td><td>To be announced</td></tr>
+                <tr><td>Final Assessment</td><td>Final assessment</td><td>To be announced</td><td>To be announced</td></tr>
+                <tr><td>Viva</td><td>Final assessment</td><td>To be announced</td><td>To be announced</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">Marks allocation will be published with the confirmed assessment schedule.</p>
+        </div>
+      </section>
+
+      <section class="page-section" id="documents">
+        <div class="container">
+          <p class="eyebrow">Project resources</p>
+          <h2>Documents</h2>
+          <p class="section-intro">Download the project research paper, individual proposals and thesis drafts.</p>
+          <h3 class="subheading">Research paper</h3>
+          <ul class="resource-list">
+            <li><div><strong>Maldive Fish Research Paper</strong><span>Project research paper (PDF)</span></div><a class="button button-small" href="/Maldive_Fish_Research_Paper.pdf" download>Download PDF</a></li>
+          </ul>
+          <h3 class="subheading">Individual proposals</h3>
+          <ul class="resource-list">
+            <li><div><strong>Bandara C.S.</strong><span>Individual proposal (PDF)</span></div><a class="button button-small" href="/Individual_Proposal/IT22340214%20-%20BANDARA%20C.S..pdf" download>Download PDF</a></li>
+            <li><div><strong>Ramesh J N G A</strong><span>Individual proposal (PDF)</span></div><a class="button button-small" href="/Individual_Proposal/R26-IT-028%C2%AD_%C2%ADIT22341686_Ramesh%20J%20N%20G%20A%20.pdf" download>Download PDF</a></li>
+            <li><div><strong>Sanchala W K S</strong><span>Individual proposal (PDF)</span></div><a class="button button-small" href="/Individual_Proposal/RP-26-IT-028_IT22224934_Sanchala%20W%20K%20S.pdf" download>Download PDF</a></li>
+            <li><div><strong>Madurawala M D S S</strong><span>Individual proposal (PDF)</span></div><a class="button button-small" href="/Individual_Proposal/RP-26-IT-028_IT22300096_Madurawala%20M%20D%20S%20S.pdf" download>Download PDF</a></li>
+          </ul>
+          <h3 class="subheading">Thesis drafts</h3>
+          <ul class="resource-list">
+            <li><div><strong>IT22224934</strong><span>Thesis draft (PDF)</span></div><a class="button button-small" href="/Thesis/IT22224934_DRAFT.pdf" download>Download PDF</a></li>
+            <li><div><strong>IT22300096</strong><span>Thesis draft (PDF)</span></div><a class="button button-small" href="/Thesis/IT22300096_DRAFT.pdf" download>Download PDF</a></li>
+            <li><div><strong>IT22340214</strong><span>Thesis draft (PDF)</span></div><a class="button button-small" href="/Thesis/IT22340214_DRAFT.pdf" download>Download PDF</a></li>
+            <li><div><strong>IT22341686</strong><span>Thesis draft (PDF)</span></div><a class="button button-small" href="/Thesis/IT22341686_DRAFT.pdf" download>Download PDF</a></li>
+            <li><div><strong>Project thesis</strong><span>Thesis draft (PDF)</span></div><a class="button button-small" href="/Thesis/RP-26-IT-28_DRAFT.pdf" download>Download PDF</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="presentations">
+        <div class="container">
+          <p class="eyebrow">Project resources</p>
+          <h2>Presentations</h2>
+          <p class="section-intro">Download the proposal and progress presentations.</p>
+          <ul class="resource-list">
+            <li><div><strong>Proposal Presentation</strong><span>PDF presentation</span></div><a class="button button-small" href="/R26-IT-028_Proposal_Presentation.pdf" download>Download PDF</a></li>
+            <li><div><strong>Progress Presentation - 1</strong><span>PowerPoint presentation</span></div><a class="button button-small" href="/R26-IT-028_PP1_Presentation.pptx" download>Download PPTX</a></li>
+            <li><div><strong>Progress Presentation - 2</strong><span>PowerPoint presentation</span></div><a class="button button-small" href="/R26-IT-028_PP2_Presentation.pptx" download>Download PPTX</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="page-section" id="team">
+        <div class="container">
+          <p class="eyebrow">Research team</p>
+          <h2>Meet the team</h2>
+          <article class="panel institution">
+            <h3>Sri Lanka Institute of Information Technology</h3>
+            <p>Malabe, Sri Lanka</p>
+          </article>
+          <div class="card-grid card-grid-3">
+            <article class="card team-card">
+              <div class="team-portrait team-initials" aria-hidden="true">SW</div>
+              <h3>Sanchala W K S</h3>
+              <p class="eyebrow">Researcher · 1st author</p>
+              <address>Department of Information Technology<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:IT22224934@my.sliit.lk">IT22224934@my.sliit.lk</a>
+            </article>
+            <article class="card team-card">
+              <div class="team-portrait team-initials" aria-hidden="true">RJ</div>
+              <h3>Ramesh J N G A</h3>
+              <p class="eyebrow">Researcher · 2nd author</p>
+              <address>Department of Information Technology<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:IT22341686@my.sliit.lk">IT22341686@my.sliit.lk</a>
+            </article>
+            <article class="card team-card">
+              <div class="team-portrait team-initials" aria-hidden="true">MD</div>
+              <h3>Madurawala M D S S</h3>
+              <p class="eyebrow">Researcher · 3rd author</p>
+              <address>Department of Information Technology<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:IT22300096@my.sliit.lk">IT22300096@my.sliit.lk</a>
+            </article>
+            <article class="card team-card">
+              <div class="team-portrait team-initials" aria-hidden="true">BC</div>
+              <h3>Bandara C S</h3>
+              <p class="eyebrow">Researcher · 4th author</p>
+              <address>Department of Information Technology<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:IT22340214@my.sliit.lk">IT22340214@my.sliit.lk</a>
+            </article>
+            <article class="card team-card">
+              <img class="team-portrait" src="/team/supunya-swarnakantha.png" alt="Supunya Swarnakantha, project supervisor">
+              <h3>Supunya Swarnakantha</h3>
+              <p class="eyebrow">Supervisor · Faculty of Computing</p>
+              <address>Faculty of Computing<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:ravi.s@sliit.lk">ravi.s@sliit.lk</a>
+            </article>
+            <article class="card team-card">
+              <img class="team-portrait" src="/team/dulani-jayasinghe.png" alt="Dulani Jayasinghe, project co-supervisor">
+              <h3>Dulani Jayasinghe</h3>
+              <p class="eyebrow">Co-supervisor · Faculty of Computing</p>
+              <address>Faculty of Computing<br>Sri Lanka Institute of Information Technology<br>Malabe, Sri Lanka</address>
+              <a class="team-email" href="mailto:dulani.m@sliit.lk">dulani.m@sliit.lk</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section section-muted" id="references">
+        <div class="container">
+          <p class="eyebrow">References</p>
+          <h2>Academic references</h2>
+          <p class="section-intro">Selected references grouped by research area.</p>
+          <div class="card-grid card-grid-2">
+            <article class="card"><h3>Computer vision</h3><ol><li>Redmon et al. (2016). You Only Look Once: Unified, Real-Time Object Detection.</li><li>He et al. (2016). Deep Residual Learning for Image Recognition.</li><li>Lin et al. (2017). Feature Pyramid Networks for Object Detection.</li></ol></article>
+            <article class="card"><h3>Fish freshness</h3><ol start="4"><li>Jia et al. (2021). Hyperspectral and image-based methods for fish freshness evaluation.</li><li>Park et al. (2020). Sensor-based grading for seafood quality monitoring.</li><li>López-García et al. (2022). Volatile organic compound analysis in marine product quality control.</li></ol></article>
+            <article class="card"><h3>AI / deep learning</h3><ol start="7"><li>Khan et al. (2024). YOLOv11 and modern real-time detection pipelines.</li><li>Shin et al. (2023). Transfer learning for food quality inspection using CNNs.</li><li>Zhou et al. (2024). A review of edge AI systems for industrial monitoring.</li></ol></article>
+            <article class="card"><h3>IoT / sensors</h3><ol start="10"><li>Atzori et al. (2010). Internet of Things for environmental monitoring in food processing.</li><li>Babu et al. (2021). MQ-135 and DHT22-based monitoring for drying systems.</li><li>Khan et al. (2022). MQTT for low-overhead telemetry in industrial agriculture.</li></ol></article>
+            <article class="card"><h3>Food quality</h3><ol start="13"><li>Santos et al. (2020). Quality assurance for dried fish products and moisture stability.</li><li>Binsi et al. (2019). Sensory and chemical indicators of fish spoilage.</li><li>Navarro et al. (2023). Shelf-life models for salted and dried seafood products.</li></ol></article>
+            <article class="card"><h3>Drying / shelf-life</h3><ol start="16"><li>Labuza et al. (1984). Arrhenius-based prediction methods for food stability.</li><li>Bertolin et al. (2021). Drying kinetics and process optimization in fish preservation.</li><li>Selvaraj et al. (2022). Moisture transport and quality behavior during drying of salted fish.</li></ol></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="contact">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h2>Project collaboration</h2>
+          <div class="card-grid card-grid-2">
+            <article class="card"><h3>Email</h3><p><a href="mailto:research@smartmaldive.ai">research@smartmaldive.ai</a></p></article>
+            <article class="card"><h3>Institution</h3><p>Sri Lanka Institute of Information Technology</p></article>
+            <article class="card"><h3>Department</h3><p>Department of Information Technology / Faculty of Computing</p></article>
+            <article class="card"><h3>Send an inquiry</h3><p>Use your email application to contact the team.</p><a class="button button-primary" href="mailto:research@smartmaldive.ai?subject=Project%20collaboration">Email the project team</a></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p><strong>SmartMaldive AI</strong> — AI and IoT for smart Maldive fish processing.</p>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
   </body>
 </html>
